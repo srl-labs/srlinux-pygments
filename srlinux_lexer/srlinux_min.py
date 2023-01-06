@@ -8,7 +8,7 @@ from .parsers import (
     keywords,
     pos_words,
     neg_words,
-    sys_lo_if,
+    sys_lo_vxlan_if,
     eth_if,
     ipv4,
     ipv6,
@@ -37,6 +37,6 @@ class SRLinuxLexerMin(RegexLexer):
     tokens["root"].extend(pos_words)
     tokens["root"].extend(neg_words)
     tokens["root"].extend(eth_if)
-    tokens["root"].extend(sys_lo_if)
+    tokens["root"].extend(sys_lo_vxlan_if)
     tokens["root"].extend(ipv4)
     tokens["root"].extend(ipv6)

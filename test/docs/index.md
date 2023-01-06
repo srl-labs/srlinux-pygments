@@ -67,6 +67,31 @@ Oper state      : up
 
 ```
 
+vxlan interfaces and RTs
+
+```srl
+enter candidate
+    /network-instance vrf-1
+        protocols {
+            bgp-evpn {
+                bgp-instance 1 {
+                    admin-state enable
+                    vxlan-interface vxlan1.1
+                    evi 111
+                }
+            }
+            bgp-vpn {
+                bgp-instance 1 {
+                    route-target {
+                        export-rt target:100:111
+                        import-rt target:100:111
+                    }
+                }
+            }
+        }
+commit now
+```
+
 ## Set style
 
 ```srl

@@ -43,10 +43,10 @@ eth_if = [
     )
 ]
 
-sys_lo_if = [
+sys_lo_vxlan_if = [
     # systemX.Y and loX.Y interfaces. https://regex101.com/r/T7UlHK/1
     (
-        r"(system|lo)\d+(\.\d+)?",
+        r"(system|lo|vxlan)\d+(\.\d+)?",
         Name.Constant,
     )
 ]
