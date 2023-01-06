@@ -1,0 +1,4 @@
+/* make 2nd prompt line of srlinux render bold */
+:is(.language-srl, .language-srlmin) :is(.n) {
+    font-weight: bolder;
+}

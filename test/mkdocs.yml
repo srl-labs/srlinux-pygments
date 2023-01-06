@@ -1,0 +1,95 @@
+site_name: Learn SR Linux
+nav:
+    - Home: index.md
+
+# Repository
+repo_name: srl-labs/srlinux-pygments
+repo_url: https://github.com/srl-labs/srlinux-pygments
+edit_uri: edit/main/docs/
+
+theme:
+    name: material
+    palette:
+        # Palette toggle for light mode
+        - scheme: default
+          toggle:
+              icon: material/brightness-7
+              name: Switch to dark mode
+
+        # Palette toggle for dark mode
+        - scheme: slate
+          toggle:
+              icon: material/brightness-4
+              name: Switch to light mode
+
+    # 404 page
+    static_templates:
+        - 404.html
+
+    # Don't include MkDocs' JavaScript
+    include_search_page: false
+    search_index_only: true
+
+    features:
+        - navigation.top
+        - navigation.instant
+        - navigation.tabs
+        - search.suggest
+        - content.code.annotate
+        - toc.follow
+        - content.tooltips
+        - navigation.indexes
+        - announce.dismiss
+
+# Plugins
+plugins:
+    - search
+    - minify:
+          minify_html: true
+
+# Extensions
+markdown_extensions:
+    - markdown.extensions.admonition
+    - attr_list
+    - md_in_html
+    - markdown.extensions.def_list
+    - markdown.extensions.footnotes
+    - markdown.extensions.meta
+    - toc:
+          permalink: "#"
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+          smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+          emoji_index: !!python/name:materialx.emoji.twemoji
+          emoji_generator: !!python/name:materialx.emoji.to_svg
+    - pymdownx.highlight:
+          pygments_lang_class: true
+          linenums_style: pymdownx-inline
+          anchor_linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.magiclink:
+          repo_url_shorthand: true
+          user: srl-labs
+          repo: learn-srlinux
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.snippets:
+          check_paths: true
+    - pymdownx.superfences:
+          custom_fences:
+              - name: mermaid
+                class: mermaid
+                format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.tabbed:
+          alternate_style: true
+    - pymdownx.tasklist:
+          custom_checkbox: true
+    - pymdownx.tilde
+
+extra_css:
+    - stylesheets/pygments.css
