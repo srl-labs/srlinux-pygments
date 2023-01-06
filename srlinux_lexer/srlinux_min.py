@@ -12,6 +12,7 @@ from .parsers import (
     eth_if,
     ipv4,
     ipv6,
+    rt,
 )
 
 __all__ = ("SRLinuxLexerMin",)
@@ -40,3 +41,4 @@ class SRLinuxLexerMin(RegexLexer):
     tokens["root"].extend(sys_lo_vxlan_if)
     tokens["root"].extend(ipv4)
     tokens["root"].extend(ipv6)
+    tokens["root"].extend(rt)

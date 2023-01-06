@@ -85,3 +85,10 @@ nums = [
         ),
     )
 ]
+
+rt = [
+    (
+        r"target:\S+",
+        Name.Constant,
+    )
+]

@@ -14,6 +14,7 @@ from .parsers import (
     ipv4,
     ipv6,
     nums,
+    rt,
 )
 
 __all__ = ("SRLinuxLexer",)
@@ -42,3 +43,4 @@ class SRLinuxLexer(RegexLexer):
     tokens["root"].extend(ipv4)
     tokens["root"].extend(ipv6)
     tokens["root"].extend(nums)
+    tokens["root"].extend(rt)
