@@ -6,7 +6,7 @@ MKDOCS_INS = ghcr.io/srl-labs/mkdocs-material-insiders:8.5.11-insiders-4.27.0-he
 # re-run the web server when changes are made to the lexer.
 .PHONY: test
 test:
-	docker run -it --rm -p 8001:8000 \
+	docker run -it --rm -p 8010:8000 \
 		-v $(CURDIR)/test:/docs \
 		-v $(CURDIR):/srlinux-pygments \
 		--entrypoint '' \

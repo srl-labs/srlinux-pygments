@@ -67,11 +67,12 @@ ipv6 = [  # IPv6 addr and CIDR. https://regex101.com/r/U1jrZ9/1
 ]
 
 nums = [
-    # Numbers https://regex101.com/r/qxQWER/1
+    # Numbers https://regex101.com/r/6lDqGC/1
     (
-        r"(?:(\d+)(,)\s*(\d+))|(?:(\s)(\d+)(\s))|(?:([\[(,])(\d+))|(?:(\/)(\d+))",
+        r"(?:(\d+)(,)(\s*)(\d+))|(?:(\s)(\d+)(\s))|(?:([\[(,])(\d+))|(?:(\/)(\d+))",
         bygroups(
             Name.Constant,
+            Text,
             Text,
             Name.Constant,
             Text,
