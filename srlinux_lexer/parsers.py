@@ -14,9 +14,9 @@ srl_prompt = [
 ]
 
 comments = [
-    # comments in the CLI snippets `#`. https://regex101.com/r/dtR80f/1
+    # comments in the CLI snippets `#`. https://regex101.com/r/dtR80f/2
     (
-        r"^\s*#.*$",
+        r"(?:[^\n\w]+#.*$)|(?:^\s*#.*$)",
         Comment,
     ),
 ]
